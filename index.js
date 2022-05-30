@@ -1,20 +1,30 @@
 let test = ["T", "e", "s", "t"]
 
 function easyRead (){
-    let p = document.querySelector("p").innerHTML
+    let p = document.querySelectorAll("p").innerHTML
     console.log(p)
-    let letters = p.split("")
-    console.log(letters)
+    let words = p.split(" ")
     let paragraph = document.createElement("p")
-    paragraph.innerHTML = `<span>${firstHalf(letters)}</span>${secondHalf(letters)}`
+    for (let word of words){
+        console.log(word)
+        let letters = word.split("")
+        let first = firstHalf(letters)
+        let second = secondHalf(letters)
+        paragraph.innerHTML += (first)
+        paragraph.append(second)
+        paragraph.innerHTML += " "
+    }
+
     return paragraph
 }
 
 function firstHalf(array){
     let bold = []
+    bold.push("<b>")
     for (let i = 0; i < (array.length / 2); i++){
         bold.push(array[i])
     }
+    bold.push("</b>")
     return bold.join("")
 }
 
