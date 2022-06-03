@@ -3,13 +3,13 @@ function easyRead (p) {
   let words = para.split(' ')
   let paragraph = document.createElement('p')
   for (let word of words) {
-      let letters = word.split('')
-      let first = firstHalf(letters)
-      let second = secondHalf(letters)
-      paragraph.innerHTML += first
-      paragraph.append(second)
-      paragraph.innerHTML += ' '
-    }
+    let letters = word.split('')
+    let first = firstHalf(letters)
+    let second = secondHalf(letters)
+    paragraph.innerHTML += first
+    paragraph.append(second)
+    paragraph.innerHTML += ' '
+  }
   return paragraph
 }
 
@@ -31,10 +31,23 @@ function secondHalf (array) {
   return slim.reverse().join('')
 }
 
-function renderEasyRead () {
-  let paragraphs = document.querySelectorAll('p')
-  for (let p of paragraphs) {
+function renderEasyRead (allP) {
+  for (let p of allP) {
     let paragraph = easyRead(p)
+    console.log(paragraph)
     p.innerHTML = paragraph.innerHTML
   }
 }
+
+function redoEasyRead (allP) {
+  console.log(allP)
+  for (let p of allP) {
+    p.innerHTML = p
+  }
+}
+
+function toggle () {
+  let paragraphs = document.querySelectorAll('p')
+    renderEasyRead(paragraphs)
+  }
+
