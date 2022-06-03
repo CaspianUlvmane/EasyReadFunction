@@ -1,15 +1,15 @@
 function easyRead (p) {
-  para = p.innerHTML
+  para = p.innerText
   let words = para.split(' ')
   let paragraph = document.createElement('p')
   for (let word of words) {
-    let letters = word.split('')
-    let first = firstHalf(letters)
-    let second = secondHalf(letters)
-    paragraph.innerHTML += first
-    paragraph.append(second)
-    paragraph.innerHTML += ' '
-  }
+      let letters = word.split('')
+      let first = firstHalf(letters)
+      let second = secondHalf(letters)
+      paragraph.innerHTML += first
+      paragraph.append(second)
+      paragraph.innerHTML += ' '
+    }
   return paragraph
 }
 
@@ -33,8 +33,8 @@ function secondHalf (array) {
 
 function renderEasyRead () {
   let paragraphs = document.querySelectorAll('p')
-  for (let p of paragraphs){
-      let paragraph = easyRead(p)
-      p.innerHTML = paragraph.innerHTML
+  for (let p of paragraphs) {
+    let paragraph = easyRead(p)
+    p.innerHTML = paragraph.innerHTML
   }
 }
