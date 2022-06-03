@@ -1,1 +1,1 @@
-renderEasyRead()
+toggle()
