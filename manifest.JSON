@@ -2,6 +2,11 @@
   "name": "EasyRead",
   "manifest_version": 3,
   "version": "1.0",
+  "author": "Caspian Ulvmåne",
+  "developer": {
+    "name": "Caspian Ulvmåne",
+    "url": "https://www.linkedin.com/in/caspian-ulvmåne/"
+  },
   "action": {},
   "icons": { "16": "icon.png" },
   "web_accessible_resources": [{
