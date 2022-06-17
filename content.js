@@ -31,23 +31,11 @@ function secondHalf (array) {
   return slim.reverse().join('')
 }
 
-function renderEasyRead (allP) {
-  for (let p of allP) {
+function renderEasyRead () {
+  let paragraphs = document.querySelectorAll('p')
+  for (let p of paragraphs) {
     let paragraph = easyRead(p)
     console.log(paragraph)
     p.innerHTML = paragraph.innerHTML
   }
 }
-
-function redoEasyRead (allP) {
-  console.log(allP)
-  for (let p of allP) {
-    p.innerHTML = p
-  }
-}
-
-function toggle () {
-  let paragraphs = document.querySelectorAll('p')
-    renderEasyRead(paragraphs)
-  }
-
