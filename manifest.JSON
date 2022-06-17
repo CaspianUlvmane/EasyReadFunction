@@ -14,10 +14,6 @@
       "js": ["content.js", "background.js"]
     }
   ],
-  "background": {
-    "js": "content.js",
-    "service_worker": "background.js"
-  },
   "permissions": [
     "tabs",
     "bookmarks",
